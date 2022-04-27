@@ -1,0 +1,9 @@
+name: Closet Server
+on: push
+jobs:
+  Docker:
+    name: Dockercodebase
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: action/checkout@v2
