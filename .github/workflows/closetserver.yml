@@ -3,9 +3,12 @@ name: Closet-Server
 on: push
 
 jobs:
-  docker:
-    name: Docker code base
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+  - type: "SSH_COMMAND"
+    working_directory: "/"
+    login: "closetserver"
+    password: "$closetserver"
+    host: "20.204.52.137"
+    port: "22"
+    ignore_errors: true
+    shell: "SH"
+    run_as_script: true
