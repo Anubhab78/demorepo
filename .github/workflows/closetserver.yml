@@ -12,6 +12,6 @@ jobs:
       with:
         host: 20.51.190.19
         username: azureuser 
-        secret: ${{ secrets.AZUREKEY }}
+        key: ${{ secrets.AZUREKEY }}
         port: 22
         script: Whoami
