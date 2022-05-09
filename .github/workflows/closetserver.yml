@@ -1,19 +1,8 @@
-# name: Closet-Server
-
-# on: push
-
-# jobs:
-#   docker:
-#     name: Docker code base
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-
 name: remote ssh command
-on: [push]
-jobs:
 
+on: [push]
+
+jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -21,7 +10,7 @@ jobs:
     - name: executing remote ssh commands using password
       uses: azureuser/ssh-action@master
       with:
-        host: 
-        public_ip_address: 20.51.190.19
+        host: 20.51.190.19
         username: azureuser 
+        secret: secret.azurekey
         port: 22
