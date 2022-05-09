@@ -10,8 +10,8 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: 20.51.190.19
-        username: azureuser 
-        key: ${{ secrets.AZUREKEY }}
-        port: 22
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }} 
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
         script: Whoami
