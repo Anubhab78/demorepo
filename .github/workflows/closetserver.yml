@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
-      
+      uses: appleboy/ssh-action@master
       with:
         host: 20.51.190.19
         username: azureuser 
-        secret: secret.azurekey
+        secret: ${{ secrets.AZUREKEY }}
         port: 22
