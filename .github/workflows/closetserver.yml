@@ -13,7 +13,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        source: "trigger.sh"
+        source: "trigger/trigger.sh"
         
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
