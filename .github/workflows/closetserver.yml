@@ -15,6 +15,8 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "trigger/trigger.sh"
         target: "trigger"
+        strip_components: 1
+        
         
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
